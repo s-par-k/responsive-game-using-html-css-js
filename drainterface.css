@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron",sans-serif;
+    text-decoration: none;
+    color: #D3D3D3;
+    user-select: none;
+    
+}
+body{
+    min-height: 100vh;
+    background: url(dragoooo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body::before{
+    content:"";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right,#000,#00000000);
+    z-index: -1;
+}
+#start{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-content: space-between;
+    align-items: center;
+   margin: 30px;
+    
+}
+#start .stat{
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #D3D3D3;
+    animation: animation 1.5s linear forwards;
+    animation-delay: 500ms;
+    opacity: 0;
+}
+#start .stat:hover{
+background: linear-gradient(#ffffff00,#ffffff34,#ffffff00);
+color: whitesmoke;
+
+}
+#start #goldtext{
+    color: #DAA520;
+}
+#start #healthtext{
+    color: 	#F08080;
+}
+#start #xptext{
+    color: 	#778899;
+}
+#masterstart{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px;
+}
+#masterstart .stat{
+    text-transform: uppercase;
+font-size: 25px;
+padding: 20px;
+font-weight: bold;
+letter-spacing: 2px;
+position: relative;
+border-radius: 4px;
+border: 1px solid transparent;
+color: #D3D3D3;
+/* animation: animation 1.5s linear forwards;
+animation-delay: 500ms;
+opacity: 0; */
+    
+}
+#masterstart .stat:hover{
+background: linear-gradient(#ffffff00,#ffffff34,#ffffff00);
+color: whitesmoke;
+
+}
+#masterstart #monstername{
+color: #98FB98;
+}
+#masterstart #monsterhealth
+{
+color: #DC143C;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+/* #control{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 50px;
+    margin-top: 15vh;
+
+} */
+.bt{
+     /* width: 10vw;  */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid whitesmoke;
+    padding: 0.8rem;
+    margin: 40px;
+    color: #D3D3D3;
+    text-transform: uppercase;
+    font-size: 1rem;
+    background: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+     animation: animation 1.5s linear backwards;
+    animation-delay: 500ms;
+    opacity: 1; 
+    cursor: pointer;
+}
+.bt:hover{
+    background: linear-gradient(#ffffff00,#ffffff34,#ffffff00);
+    color:#FFD700;
+    
+    }
+#text{
+    border: 1px solid #ffffff1c;
+    width: 40vw;
+    height: 25vh;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    margin-left: 5rem;
+    margin-top: 9rem;
+    backdrop-filter: blur(80px);
+    box-shadow: 0 0 20px #22222265;
+    color: #D3D3D3;
+    animation: animation 1.5s linear forwards;
+    animation-delay: 500ms;
+    opacity: 0;
+}
+#text:hover{
+    background: linear-gradient(#ffffff00,#ffffff34,#ffffff00);
+    color:white;
+    
+    } 
+
+
+    
+    @keyframes animation{
+        to{transform: translateX(0);opacity:1;}
+        from{transform: translateX(30px);opacity: 0;
+        }
+    }
+
+@media screen and (max-width:700px) {
+
+    .content{
+        grid-template-columns: repeat(1,auto);
+    }
+    #control{
+        display:grid ;
+        grid-template-rows:repeat(3,auto);
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10rem;
+        margin-top: 10rem;
+    }
+    #masterstart{
+        justify-content: space-between;
+    }
+    .bt{
+        width: 50vw;
+        justify-content: center;
+        align-items: center;
+    }
+    #text{
+        width: 100vw;
+        height: 35vh;
+        /* height: 100vh; */
+    }
+    body
+    {
+        height: 100vh;
+    }
+
+}
